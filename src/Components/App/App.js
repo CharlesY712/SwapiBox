@@ -17,10 +17,11 @@ class App extends Component {
         <Link to="/">
           <h1 className="App-title">SwapiBox</h1>
         </Link>
-        <NavLink to="/people">People</NavLink>
+        <NavLink to="/people" className="people">People</NavLink>
         <NavLink to="/vehicles">Vehicles</NavLink>
         <NavLink to="/planets">Planets</NavLink>
         <Route path="/people" render={ () => <CardContainer people={this.state.person} />} />
+        <Route exact path="/" render={ () => <h1>Home</h1>} />
       </div>
     );
   }
