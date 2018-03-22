@@ -2,6 +2,7 @@ import React from "react";
 
 const CardContainer = (props) => {
   // console.log(props);
+  // componentDidMount() {}
   return (
     <div>
       <div>
@@ -23,7 +24,7 @@ const CardContainer = (props) => {
         <h1>Card 6</h1>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default CardContainer;

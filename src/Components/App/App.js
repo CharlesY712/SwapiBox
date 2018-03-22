@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, NavLink, Link } from "react-router-dom";
+import { Switch, Route, NavLink, Link } from "react-router-dom";
 import "./App.css";
 import CardContainer from "../CardContainer/CardContainer";
 import Welcome from "../Welcome/Welcome";
@@ -24,7 +24,6 @@ class App extends Component {
     const peopleObj = await fetchPeople();
     const people = peopleObj.results;
     this.setState({ people });
-    console.log(this.state.people);
   }
 
   componentDidUpdate() {}
@@ -35,14 +34,12 @@ class App extends Component {
         <Link to="/" className='swapiLink'>
           <h1 className="App-title">SwapiBox</h1>
         </Link>
-        <NavLink to="/people" className="people">
-          People
-        </NavLink>
+        <NavLink to="/people" className="people">People</NavLink>
         <NavLink to="/vehicles" className="vehicles">Vehicles</NavLink>
         <NavLink to="/planets" className="planets">Planets</NavLink>
         <NavLink to="/favorites" className="favorites">0 Favorites</NavLink>
         {this.state.crawl && (
-          <div>
+          <Switch>
             <Route
               exact path="/"
               render={() => <Welcome crawl={this.state.crawl} />}
@@ -63,7 +60,7 @@ class App extends Component {
               path="/favorites"
               render={() => <CardContainer favorites={this.state.favorites} />}
             />
-          </div>
+          </Switch>
         )}
       </div>
     );
