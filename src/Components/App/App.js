@@ -3,20 +3,28 @@ import { Route, NavLink, Link } from "react-router-dom";
 import "./App.css";
 import CardContainer from "../CardContainer/CardContainer";
 import Welcome from "../Welcome/Welcome";
-import fetchOpeningCrawl from "../API/api";
+import fetchOpeningCrawl from "../API/fetchOpeningCrawl";
+import fetchPeople from "../API/fetchPeople";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       crawl: null,
-      person: [{}, {}]
+      people: [{}, {}],
+      planets: [],
+      vehicles: [],
+      favorites: []
     };
   }
 
   async componentDidMount() {
     const crawl = await fetchOpeningCrawl();
     this.setState({ crawl });
+    const peopleObj = await fetchPeople();
+    const people = peopleObj.results;
+    this.setState({ people });
+    console.log(this.state.people);
   }
 
   componentDidUpdate() {}
@@ -41,7 +49,19 @@ class App extends Component {
             />
             <Route
               path="/people"
-              render={() => <CardContainer people={this.state.person} />}
+              render={() => <CardContainer people={this.state.people} />}
+            />
+            <Route
+              path="/planets"
+              render={() => <CardContainer planets={this.state.planets} />}
+            />
+            <Route
+              path="/vehicles"
+              render={() => <CardContainer vehicles={this.state.vehicles} />}
+            />
+            <Route
+              path="/favorites"
+              render={() => <CardContainer favorites={this.state.favorites} />}
             />
           </div>
         )}

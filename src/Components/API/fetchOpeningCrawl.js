@@ -1,4 +1,3 @@
-
 const fetchOpeningCrawl = async () => {
   const rand = Math.floor(Math.random() * Math.floor(7)) + 1;
   try {
