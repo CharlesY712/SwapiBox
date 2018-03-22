@@ -1,6 +1,7 @@
 import React from "react";
-import { Route, NavLink, Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import "./Welcome.css";
+
 
 const Welcome = ({crawl}) => {
   return (
@@ -20,3 +21,7 @@ const Welcome = ({crawl}) => {
 };
 
 export default Welcome;
+
+Welcome.propTypes = {
+  crawl: PropTypes.object
+};

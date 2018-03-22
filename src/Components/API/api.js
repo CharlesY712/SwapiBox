@@ -1,14 +1,14 @@
-import React from "react";
 
-const fetchOpeningCrawl = async handle => {
+const fetchOpeningCrawl = async () => {
   const rand = Math.floor(Math.random() * Math.floor(7)) + 1;
   try {
     const url = `https://swapi.co/api/films/${rand}`;
     const response = await fetch(url);
-    const data = await response.json();
-    return ({crawl: data.opening_crawl, title: data.title, episode: rand, release: data.release_date})
-  } catch (err) {
-    console.log("Error: ", err);
+    const welcome = await response.json();
+    return ({crawl: welcome.opening_crawl, title: welcome.title,
+      episode: rand, release: welcome.release_date});
+  } catch (error) {
+    // console.log("Error: ", error);
   }
 };
 
