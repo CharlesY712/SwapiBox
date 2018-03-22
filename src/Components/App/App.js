@@ -10,20 +10,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      crawl: null,
-      people: [{}, {}],
-      planets: [],
-      vehicles: [],
-      favorites: []
+      crawl: null
     };
   }
 
   async componentDidMount() {
     const crawl = await fetchOpeningCrawl();
     this.setState({ crawl });
-    const peopleObj = await fetchPeople();
-    const people = peopleObj.results;
-    this.setState({ people });
   }
 
   componentDidUpdate() {}
@@ -46,19 +39,26 @@ class App extends Component {
             />
             <Route
               path="/people"
-              render={() => <CardContainer people={this.state.people} />}
+              render={({location}) => <CardContainer 
+                location={location}
+              />}
             />
             <Route
               path="/planets"
-              render={() => <CardContainer planets={this.state.planets} />}
+              render={({location}) => <CardContainer 
+                location={location}
+              />}
             />
             <Route
               path="/vehicles"
-              render={() => <CardContainer vehicles={this.state.vehicles} />}
+              render={({location}) => <CardContainer 
+                location={location}
+                 />}
             />
             <Route
               path="/favorites"
-              render={() => <CardContainer favorites={this.state.favorites} />}
+              render={({location}) => <CardContainer 
+                location={location} />}
             />
           </Switch>
         )}
