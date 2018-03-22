@@ -1,5 +1,45 @@
+@font-face {
+  font-family: 'Starjedi';
+  src:  url('../../Fonts/starjedi/Starjedi.ttf')
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../../Images/127782.jpg');
+}
+
+.App-title {
+  font-family: 'Starjedi';
+  font-size: 80px;
+  color: #feda4a;
+  letter-spacing: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.swapiLink {
+  text-decoration: none;
+}
+
+.people,
+.planets,
+.vehicles,
+.favorites {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 25px;
+  color: #feda4a;
+  padding: 5px 10px;
+  margin: 0 20px 0 20px;
+  text-decoration: none;
+  border: 2px solid #feda4a;
 }
 
 .people.active {
