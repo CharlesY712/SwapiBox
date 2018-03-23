@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import fetchPeople from "../API/fetchPeople";
 import fetchPlanets from "../API/fetchPlanets";
 import fectchVehicles from "../API/fetchVehicles";
+import PeopleCard from "../PeopleCard/PeopleCard";
+import PlanetsCard from "../PlanetsCard/PlanetsCard";
 import PropTypes from "prop-types";
 
 class CardContainer extends Component {
@@ -63,22 +65,57 @@ class CardContainer extends Component {
     }
   }
 
-  render() {
+  createPeopleCards() {
+    const peopleArray = this.state.people;
+    const peopleCards = peopleArray.map((person, index) => {
+      return <PeopleCard 
+        key={index}
+        name={person.name}
+        species={person.species}
+        home={person.homeworld}
+        population={person.population}
+      />;
+    });
     return (
       <div>
-        <h1>Card 1</h1>
+        {peopleCards}
       </div>
     );
   }
 
-  createCards() {
+  createPlanetsCards() {
+    const planetsArray = this.state.planets;
+    const planetsCards = planetsArray.map((planet, index) => {
+      return <PlanetsCard 
+        key={index}
+        name={planet.name}
+        terrain={planet.terrain}
+        population={planet.population}
+        climate={planet.climate}
+        residents={planet.residents}
+      />;
+    });
     return (
       <div>
-        <Card people={this.state.people}/>
+        {planetsCards}
       </div>
-    )
+    );
   }
 
+  render() {
+    switch (this.props.location.pathname) {
+    case "/people":
+      return this.createPeopleCards();
+    case "/planets":
+      return this.createPlanetsCards();
+    case "/vehicles":
+      return this.createPeopleCards();
+    case "/favorites":
+      return this.createPeopleCards();
+    default:
+      break;
+    }
+  }
 }
 
 CardContainer.propTypes = {
