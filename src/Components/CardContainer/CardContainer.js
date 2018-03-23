@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import fetchPeople from "../API/fetchPeople";
 import fetchPlanets from "../API/fetchPlanets";
-import PropTypes from 'prop-types';
+import fectchVehicles from "../API/fetchVehicles";
+import PropTypes from "prop-types";
 
 class CardContainer extends Component {
   constructor(props) {
@@ -15,39 +16,50 @@ class CardContainer extends Component {
   }
 
   getPeopleData = async () => {
-    if (this.props.location.pathname === "/people") {
-      const people = await fetchPeople();
-      this.setState({ people });
-      console.log(this.state.people);
-    }
+    const people = await fetchPeople();
+    this.setState({ people });
   };
 
   getPlanetsData = async () => {
-    if (this.props.location.pathname === "/planets") {
-      const planets = await fetchPlanets();
-      this.setState({planets});
-      console.log(this.state.planets[0].residents[0]);
-    }
-  }
+    const planets = await fetchPlanets();
+    this.setState({ planets });
+  };
 
   getVehicleData = async () => {
-    if (this.props.location.pathname === "/vehicles") {
-      console.log("vehicles page");
-    }
-  }
+    const vehicles = await fectchVehicles();
+    this.setState({ vehicles });
+  };
 
   getFavoritesData = async () => {
-    if (this.props.location.pathname === "/favorites") {
-      console.log("favorites page");
+    console.log("favorites page");
+  };
+
+  determinePath() {
+    switch (this.props.location.pathname) {
+    case "/people":
+      this.getPeopleData();
+      break;
+    case "/planets":
+      this.getPlanetsData();
+      break;
+    case "/vehicles":
+      this.getVehicleData();
+      break;
+    case "/favorites":
+      this.getFavoritesData();
+      break;
+    default:
+      break;
     }
   }
 
-  async componentDidUpdate(prevProps) {
+  componentDidMount() {
+    this.determinePath();
+  }
+
+  componentDidUpdate(prevProps) {
     if (prevProps.location !== this.props.location) {
-      this.getPeopleData();
-      this.getPlanetsData();
-      this.getVehicleData();
-      this.getFavoritesData();
+      this.determinePath();
     }
   }
 
@@ -58,6 +70,15 @@ class CardContainer extends Component {
       </div>
     );
   }
+
+  createCards() {
+    return (
+      <div>
+        <Card people={this.state.people}/>
+      </div>
+    )
+  }
+
 }
 
 CardContainer.propTypes = {

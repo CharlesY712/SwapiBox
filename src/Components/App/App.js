@@ -27,8 +27,8 @@ class App extends Component {
           <h1 className="App-title">SwapiBox</h1>
         </Link>
         <NavLink to="/people" className="people">People</NavLink>
-        <NavLink to="/vehicles" className="vehicles">Vehicles</NavLink>
         <NavLink to="/planets" className="planets">Planets</NavLink>
+        <NavLink to="/vehicles" className="vehicles">Vehicles</NavLink>
         <NavLink to="/favorites" className="favorites">0 Favorites</NavLink>
         {this.state.crawl && (
           <Switch>
