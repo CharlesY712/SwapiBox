@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import fetchPeople from "../API/fetchPeople";
-import PropTypes from 'propt'
+import PropTypes from 'prop-types';
 
 class CardContainer extends Component {
   constructor(props) {
@@ -73,5 +73,9 @@ class CardContainer extends Component {
     );
   }
 }
+
+CardContainer.propTypes = {
+  location: PropTypes.object
+};
 
 export default CardContainer;
