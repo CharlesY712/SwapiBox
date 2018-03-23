@@ -4,7 +4,6 @@ import "./App.css";
 import CardContainer from "../CardContainer/CardContainer";
 import Welcome from "../Welcome/Welcome";
 import fetchOpeningCrawl from "../API/fetchOpeningCrawl";
-import fetchPeople from "../API/fetchPeople";
 
 class App extends Component {
   constructor() {
@@ -53,7 +52,7 @@ class App extends Component {
               path="/vehicles"
               render={({location}) => <CardContainer 
                 location={location}
-                 />}
+              />}
             />
             <Route
               path="/favorites"
