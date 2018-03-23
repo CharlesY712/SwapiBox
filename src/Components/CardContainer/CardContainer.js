@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import fetchPeople from "../API/fetchPeople";
+import fetchPlanets from "../API/fetchPlanets";
 import PropTypes from 'prop-types';
 
 class CardContainer extends Component {
@@ -7,8 +8,8 @@ class CardContainer extends Component {
     super(props);
     this.state = {
       people: [],
-      vehicles: [],
       planets: [],
+      vehicles: [],
       favorites: []
     };
   }
@@ -21,15 +22,17 @@ class CardContainer extends Component {
     }
   };
 
-  getVehicleData = async () => {
-    if (this.props.location.pathname === "/vehicles") {
-      console.log("vehicles page");
+  getPlanetsData = async () => {
+    if (this.props.location.pathname === "/planets") {
+      const planets = await fetchPlanets();
+      this.setState({planets});
+      console.log(this.state.planets[0].residents[0]);
     }
   }
 
-  getPlanetsData = async () => {
-    if (this.props.location.pathname === "/planets") {
-      console.log("planets page");
+  getVehicleData = async () => {
+    if (this.props.location.pathname === "/vehicles") {
+      console.log("vehicles page");
     }
   }
 
@@ -42,8 +45,8 @@ class CardContainer extends Component {
   async componentDidUpdate(prevProps) {
     if (prevProps.location !== this.props.location) {
       this.getPeopleData();
-      this.getVehicleData();
       this.getPlanetsData();
+      this.getVehicleData();
       this.getFavoritesData();
     }
   }
@@ -51,24 +54,7 @@ class CardContainer extends Component {
   render() {
     return (
       <div>
-        <div>
-          <h1>Card 1</h1>
-        </div>
-        <div>
-          <h1>Card 2</h1>
-        </div>
-        <div>
-          <h1>Card 3</h1>
-        </div>
-        <div>
-          <h1>Card 4</h1>
-        </div>
-        <div>
-          <h1>Card 5</h1>
-        </div>
-        <div>
-          <h1>Card 6</h1>
-        </div>
+        <h1>Card 1</h1>
       </div>
     );
   }
