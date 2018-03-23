@@ -1,16 +1,15 @@
 import React, { Component } from "react";
-import { Route, NavLink, Link } from "react-router-dom";
+import { Switch, Route, NavLink, Link } from "react-router-dom";
 import "./App.css";
 import CardContainer from "../CardContainer/CardContainer";
 import Welcome from "../Welcome/Welcome";
-import fetchOpeningCrawl from "../API/api";
+import fetchOpeningCrawl from "../API/fetchOpeningCrawl";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      crawl: null,
-      person: [{}, {}]
+      crawl: null
     };
   }
 
@@ -27,23 +26,40 @@ class App extends Component {
         <Link to="/" className='swapiLink'>
           <h1 className="App-title">SwapiBox</h1>
         </Link>
-        <NavLink to="/people" className="people">
-          People
-        </NavLink>
+        <NavLink to="/people" className="people">People</NavLink>
         <NavLink to="/vehicles" className="vehicles">Vehicles</NavLink>
         <NavLink to="/planets" className="planets">Planets</NavLink>
         <NavLink to="/favorites" className="favorites">0 Favorites</NavLink>
         {this.state.crawl && (
-          <div>
+          <Switch>
             <Route
               exact path="/"
               render={() => <Welcome crawl={this.state.crawl} />}
             />
             <Route
               path="/people"
-              render={() => <CardContainer people={this.state.person} />}
+              render={({location}) => <CardContainer 
+                location={location}
+              />}
             />
-          </div>
+            <Route
+              path="/planets"
+              render={({location}) => <CardContainer 
+                location={location}
+              />}
+            />
+            <Route
+              path="/vehicles"
+              render={({location}) => <CardContainer 
+                location={location}
+              />}
+            />
+            <Route
+              path="/favorites"
+              render={({location}) => <CardContainer 
+                location={location} />}
+            />
+          </Switch>
         )}
       </div>
     );

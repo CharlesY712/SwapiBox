@@ -42,7 +42,9 @@ body {
   border: 2px solid #feda4a;
 }
 
-.people.active {
-  color: magenta;
-  background-color: salmon;
+.people.active,
+.planets.active,
+.vehicles.active,
+.favorites.active {
+  background-color: rgb(0,110,170);
 }
