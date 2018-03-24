@@ -15,7 +15,8 @@ class CardContainer extends Component {
       people: [],
       planets: [],
       vehicles: [],
-      favorites: []
+      favorites: [],
+      favoritesQuantity: 0
     };
   }
 
