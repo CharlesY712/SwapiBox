@@ -35,7 +35,6 @@ class CardContainer extends Component {
   };
 
   getFavoritesData = async () => {
-    console.log("favorites page");
   };
 
   determinePath() {

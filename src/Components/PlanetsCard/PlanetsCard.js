@@ -9,8 +9,9 @@ const PlanetsCard = ({name, terrain, population, climate, residents}) => {
       <h4>Terrain: <br/>{terrain}</h4>
       <h4>Population: <br/>{population}</h4>
       <h4>Climate: <br/>{climate}</h4>
-      <h4>Residents: <br/>{residents.length ? residents.map(resident => 
-        <p>{resident}</p>) : 'None'}</h4>
+      <h4>Residents: <br/>{residents.length ? 
+        residents.map((resident, index) => 
+          <p key={index}>{resident}</p>) : 'None'}</h4>
     </div>
   );
 };
