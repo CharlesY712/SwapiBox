@@ -1,5 +1,13 @@
 .card {
   display: inline-block;
   margin: 10px;
+  padding: 10px;
   color: #feda4a;
+  border: 2px solid #feda4a;
+  border-radius: 5%;
+}
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

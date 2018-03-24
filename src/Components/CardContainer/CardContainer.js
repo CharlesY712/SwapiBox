@@ -4,6 +4,8 @@ import fetchPlanets from "../API/fetchPlanets";
 import fectchVehicles from "../API/fetchVehicles";
 import PeopleCard from "../PeopleCard/PeopleCard";
 import PlanetsCard from "../PlanetsCard/PlanetsCard";
+import VehiclesCard from "../VehicleCard/VehicleCard";
+import "./CardContainer.css";
 import PropTypes from "prop-types";
 
 class CardContainer extends Component {
@@ -77,7 +79,7 @@ class CardContainer extends Component {
       />;
     });
     return (
-      <div>
+      <div className="card-container">
         {peopleCards}
       </div>
     );
@@ -96,8 +98,26 @@ class CardContainer extends Component {
       />;
     });
     return (
-      <div>
+      <div className="card-container">
         {planetsCards}
+      </div>
+    );
+  }
+
+  createVehicleCards() {
+    const vehiclesArray = this.state.vehicles;
+    const vehiclesCards = vehiclesArray.map((vehicle, index) => {
+      return <VehiclesCard 
+        key={index}
+        name={vehicle.name}
+        model={vehicle.model}
+        type={vehicle.class}
+        passengers={vehicle.passengers}
+      />;
+    });
+    return (
+      <div className="card-container">
+        {vehiclesCards}
       </div>
     );
   }
@@ -109,7 +129,7 @@ class CardContainer extends Component {
     case "/planets":
       return this.createPlanetsCards();
     case "/vehicles":
-      return this.createPeopleCards();
+      return this.createVehicleCards();
     case "/favorites":
       return this.createPeopleCards();
     default:

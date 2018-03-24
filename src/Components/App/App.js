@@ -23,13 +23,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Link to="/" className='swapiLink'>
-          <h1 className="App-title">SwapiBox</h1>
-        </Link>
-        <NavLink to="/people" className="people">People</NavLink>
-        <NavLink to="/planets" className="planets">Planets</NavLink>
-        <NavLink to="/vehicles" className="vehicles">Vehicles</NavLink>
-        <NavLink to="/favorites" className="favorites">0 Favorites</NavLink>
+        <header className='header'>
+          <Link to="/" className='swapiLink'>
+            <h1 className="App-title">SwapiBox</h1>
+          </Link>
+          <NavLink to="/people" className="people">People</NavLink>
+          <NavLink to="/planets" className="planets">Planets</NavLink>
+          <NavLink to="/vehicles" className="vehicles">Vehicles</NavLink>
+          <NavLink to="/favorites" className="favorites">0 Favorites</NavLink>
+        </header>
         {this.state.crawl && (
           <Switch>
             <Route

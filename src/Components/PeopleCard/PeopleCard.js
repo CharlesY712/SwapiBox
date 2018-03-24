@@ -13,4 +13,11 @@ const PeopleCard = ({name, species, home, population}) => {
   );
 };
 
+PeopleCard.propTypes = {
+  name: PropTypes.string,
+  species: PropTypes.string,
+  home: PropTypes.string,
+  population: PropTypes.string
+};
+
 export default PeopleCard;
