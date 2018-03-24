@@ -3,7 +3,7 @@ import { Switch, Route, NavLink, Link } from "react-router-dom";
 import "./App.css";
 import CardContainer from "../CardContainer/CardContainer";
 import Welcome from "../Welcome/Welcome";
-import fetchOpeningCrawl from "../API/fetchOpeningCrawl";
+import fetchOpeningCrawl from "../../API/fetchOpeningCrawl";
 
 class App extends Component {
   constructor() {
