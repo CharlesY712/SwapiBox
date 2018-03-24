@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import fetchPeople from "../API/fetchPeople";
-import fetchPlanets from "../API/fetchPlanets";
-import fectchVehicles from "../API/fetchVehicles";
+import fetchPeople from "../../API/fetchPeople";
+import fetchPlanets from "../../API/fetchPlanets";
+import fectchVehicles from "../../API/fetchVehicles";
 import PeopleCard from "../PeopleCard/PeopleCard";
 import PlanetsCard from "../PlanetsCard/PlanetsCard";
 import VehiclesCard from "../VehicleCard/VehicleCard";
@@ -15,7 +15,8 @@ class CardContainer extends Component {
       people: [],
       planets: [],
       vehicles: [],
-      favorites: []
+      favorites: [],
+      favoritesQuantity: 0
     };
   }
 
@@ -103,7 +104,7 @@ class CardContainer extends Component {
     );
   }
 
-  createVehicleCards() {
+  createVehiclesCards() {
     const vehiclesArray = this.state.vehicles;
     const vehiclesCards = vehiclesArray.map((vehicle, index) => {
       return <VehiclesCard 
@@ -121,6 +122,10 @@ class CardContainer extends Component {
     );
   }
 
+  createFavoritesCards() {
+
+  }
+
   render() {
     switch (this.props.location.pathname) {
     case "/people":
@@ -128,7 +133,7 @@ class CardContainer extends Component {
     case "/planets":
       return this.createPlanetsCards();
     case "/vehicles":
-      return this.createVehicleCards();
+      return this.createVehiclesCards();
     case "/favorites":
       return this.createPeopleCards();
     default:

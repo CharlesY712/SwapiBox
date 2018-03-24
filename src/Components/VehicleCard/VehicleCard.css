@@ -1,4 +1,4 @@
-.card {
+.vehicle-card {
   display: inline-block;
   margin: 10px;
   color: #feda4a;
@@ -6,7 +6,19 @@
   border-radius: 5%;
 }
 
+.vehicle-card-title {
+  display: inline-block;
+}
+
 h4 {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.fav-button {
+  display: inline-block;
+  background: url('../../Images/icons8-star-wars.svg');
+  border: none;
+  height: 50px;
+  width: 50px;
 }
