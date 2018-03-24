@@ -5,7 +5,7 @@ const fetchOpeningCrawl = async () => {
     const response = await fetch(url);
     const welcome = await response.json();
     return ({crawl: welcome.opening_crawl, title: welcome.title,
-      episode: rand, release: welcome.release_date});
+      episode: rand, release: welcome.release_date.slice(0, 4)});
   } catch (error) {
     // console.log("Error: ", error);
   }

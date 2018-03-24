@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import fetchPeople from "../API/fetchPeople";
 import fetchPlanets from "../API/fetchPlanets";
-import PropTypes from 'prop-types';
+import fectchVehicles from "../API/fetchVehicles";
+import PeopleCard from "../PeopleCard/PeopleCard";
+import PlanetsCard from "../PlanetsCard/PlanetsCard";
+import VehiclesCard from "../VehicleCard/VehicleCard";
+import "./CardContainer.css";
+import PropTypes from "prop-types";
 
 class CardContainer extends Component {
   constructor(props) {
@@ -15,48 +20,121 @@ class CardContainer extends Component {
   }
 
   getPeopleData = async () => {
-    if (this.props.location.pathname === "/people") {
-      const people = await fetchPeople();
-      this.setState({ people });
-      console.log(this.state.people);
-    }
+    const people = await fetchPeople();
+    this.setState({ people });
   };
 
   getPlanetsData = async () => {
-    if (this.props.location.pathname === "/planets") {
-      const planets = await fetchPlanets();
-      this.setState({planets});
-      console.log(this.state.planets[0].residents[0]);
-    }
-  }
+    const planets = await fetchPlanets();
+    this.setState({ planets });
+  };
 
   getVehicleData = async () => {
-    if (this.props.location.pathname === "/vehicles") {
-      console.log("vehicles page");
-    }
-  }
+    const vehicles = await fectchVehicles();
+    this.setState({ vehicles });
+  };
 
   getFavoritesData = async () => {
-    if (this.props.location.pathname === "/favorites") {
-      console.log("favorites page");
+    console.log("favorites page");
+  };
+
+  determinePath() {
+    switch (this.props.location.pathname) {
+    case "/people":
+      this.getPeopleData();
+      break;
+    case "/planets":
+      this.getPlanetsData();
+      break;
+    case "/vehicles":
+      this.getVehicleData();
+      break;
+    case "/favorites":
+      this.getFavoritesData();
+      break;
+    default:
+      break;
     }
   }
 
-  async componentDidUpdate(prevProps) {
+  componentDidMount() {
+    this.determinePath();
+  }
+
+  componentDidUpdate(prevProps) {
     if (prevProps.location !== this.props.location) {
-      this.getPeopleData();
-      this.getPlanetsData();
-      this.getVehicleData();
-      this.getFavoritesData();
+      this.determinePath();
     }
+  }
+
+  createPeopleCards() {
+    const peopleArray = this.state.people;
+    const peopleCards = peopleArray.map((person, index) => {
+      return <PeopleCard 
+        key={index}
+        name={person.name}
+        species={person.species}
+        home={person.homeworld}
+        population={person.population}
+      />;
+    });
+    return (
+      <div className="card-container">
+        {peopleCards}
+      </div>
+    );
+  }
+
+  createPlanetsCards() {
+    const planetsArray = this.state.planets;
+    const planetsCards = planetsArray.map((planet, index) => {
+      return <PlanetsCard 
+        key={index}
+        name={planet.name}
+        terrain={planet.terrain}
+        population={planet.population}
+        climate={planet.climate}
+        residents={planet.residents}
+      />;
+    });
+    return (
+      <div className="card-container">
+        {planetsCards}
+      </div>
+    );
+  }
+
+  createVehicleCards() {
+    const vehiclesArray = this.state.vehicles;
+    const vehiclesCards = vehiclesArray.map((vehicle, index) => {
+      return <VehiclesCard 
+        key={index}
+        name={vehicle.name}
+        model={vehicle.model}
+        type={vehicle.class}
+        passengers={vehicle.passengers}
+      />;
+    });
+    return (
+      <div className="card-container">
+        {vehiclesCards}
+      </div>
+    );
   }
 
   render() {
-    return (
-      <div>
-        <h1>Card 1</h1>
-      </div>
-    );
+    switch (this.props.location.pathname) {
+    case "/people":
+      return this.createPeopleCards();
+    case "/planets":
+      return this.createPlanetsCards();
+    case "/vehicles":
+      return this.createVehicleCards();
+    case "/favorites":
+      return this.createPeopleCards();
+    default:
+      break;
+    }
   }
 }
 
