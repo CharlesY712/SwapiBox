@@ -1,0 +1,449 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlanetsCard should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PlanetsCard
+    climate="temperate"
+    name="Alderaan"
+    population="2000000000"
+    residents={
+        Array [
+            "Leia Organa",
+            "Bail Prestor Organa",
+            "Raymus Antilles",
+          ]
+    }
+    terrain="grasslands, mountains"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Alderaan
+</h1>,
+        <h4>
+          Terrain: 
+          <br />
+          grasslands, mountains
+</h4>,
+        <h4>
+          Population: 
+          <br />
+          2000000000
+</h4>,
+        <h4>
+          Climate: 
+          <br />
+          temperate
+</h4>,
+        <h4>
+          Residents: 
+          <br />
+          <p>
+                    Leia Organa
+          </p>
+          <p>
+                    Bail Prestor Organa
+          </p>
+          <p>
+                    Raymus Antilles
+          </p>
+</h4>,
+      ],
+      "className": "card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Alderaan",
+        },
+        "ref": null,
+        "rendered": "Alderaan",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Terrain: ",
+            <br />,
+            "grasslands, mountains",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Terrain: ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          "grasslands, mountains",
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Population: ",
+            <br />,
+            "2000000000",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Population: ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          "2000000000",
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Climate: ",
+            <br />,
+            "temperate",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Climate: ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          "temperate",
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Residents: ",
+            <br />,
+            Array [
+              <p>
+                Leia Organa
+</p>,
+              <p>
+                Bail Prestor Organa
+</p>,
+              <p>
+                Raymus Antilles
+</p>,
+            ],
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Residents: ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Leia Organa",
+            },
+            "ref": null,
+            "rendered": "Leia Organa",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Bail Prestor Organa",
+            },
+            "ref": null,
+            "rendered": "Bail Prestor Organa",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Raymus Antilles",
+            },
+            "ref": null,
+            "rendered": "Raymus Antilles",
+            "type": "p",
+          },
+        ],
+        "type": "h4",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Alderaan
+</h1>,
+          <h4>
+            Terrain: 
+            <br />
+            grasslands, mountains
+</h4>,
+          <h4>
+            Population: 
+            <br />
+            2000000000
+</h4>,
+          <h4>
+            Climate: 
+            <br />
+            temperate
+</h4>,
+          <h4>
+            Residents: 
+            <br />
+            <p>
+                        Leia Organa
+            </p>
+            <p>
+                        Bail Prestor Organa
+            </p>
+            <p>
+                        Raymus Antilles
+            </p>
+</h4>,
+        ],
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Alderaan",
+          },
+          "ref": null,
+          "rendered": "Alderaan",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Terrain: ",
+              <br />,
+              "grasslands, mountains",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Terrain: ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "grasslands, mountains",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Population: ",
+              <br />,
+              "2000000000",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Population: ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "2000000000",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Climate: ",
+              <br />,
+              "temperate",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Climate: ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "temperate",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Residents: ",
+              <br />,
+              Array [
+                <p>
+                  Leia Organa
+</p>,
+                <p>
+                  Bail Prestor Organa
+</p>,
+                <p>
+                  Raymus Antilles
+</p>,
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Residents: ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Leia Organa",
+              },
+              "ref": null,
+              "rendered": "Leia Organa",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Bail Prestor Organa",
+              },
+              "ref": null,
+              "rendered": "Bail Prestor Organa",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Raymus Antilles",
+              },
+              "ref": null,
+              "rendered": "Raymus Antilles",
+              "type": "p",
+            },
+          ],
+          "type": "h4",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
