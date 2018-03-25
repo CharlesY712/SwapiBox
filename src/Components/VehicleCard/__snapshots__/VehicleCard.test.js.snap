@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VehicleCard should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <VehicleCard
+    model="Digger Crawler"
+    name="Sand Crawler"
+    passengers="30"
+    type={undefined}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="vehicle-card-title"
+>
+          Sand Crawler
+</h1>,
+        <button
+          className="fav-button"
+          onClick={[Function]}
+/>,
+        <h4>
+          Model: 
+          Digger Crawler
+</h4>,
+        <h4>
+          Class: 
+</h4>,
+        <h4>
+          Passengers: 
+          30
+</h4>,
+      ],
+      "className": "vehicle-card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Sand Crawler",
+          "className": "vehicle-card-title",
+        },
+        "ref": null,
+        "rendered": "Sand Crawler",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "fav-button",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Model: ",
+            "Digger Crawler",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Model: ",
+          "Digger Crawler",
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Class: ",
+            undefined,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Class: ",
+          undefined,
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Passengers: ",
+            "30",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Passengers: ",
+          "30",
+        ],
+        "type": "h4",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="vehicle-card-title"
+>
+            Sand Crawler
+</h1>,
+          <button
+            className="fav-button"
+            onClick={[Function]}
+/>,
+          <h4>
+            Model: 
+            Digger Crawler
+</h4>,
+          <h4>
+            Class: 
+</h4>,
+          <h4>
+            Passengers: 
+            30
+</h4>,
+        ],
+        "className": "vehicle-card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Sand Crawler",
+            "className": "vehicle-card-title",
+          },
+          "ref": null,
+          "rendered": "Sand Crawler",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "fav-button",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Model: ",
+              "Digger Crawler",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Model: ",
+            "Digger Crawler",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Class: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Class: ",
+            undefined,
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Passengers: ",
+              "30",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Passengers: ",
+            "30",
+          ],
+          "type": "h4",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
