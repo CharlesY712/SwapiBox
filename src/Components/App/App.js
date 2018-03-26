@@ -18,8 +18,6 @@ class App extends Component {
     this.setState({ crawl });
   }
 
-  componentDidUpdate() {}
-
   render() {
     return (
       <div className="App">
