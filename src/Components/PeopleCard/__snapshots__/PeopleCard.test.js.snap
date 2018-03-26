@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PeopleCard should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PeopleCard
+    home="Tatooine"
+    name="Luke Skywalker"
+    population="200000"
+    species="Human"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Luke Skywalker
+</h1>,
+        <h4>
+          Species: 
+          Human
+</h4>,
+        <h4>
+          Homeworld: 
+          Tatooine
+</h4>,
+        <h4>
+          population: 
+          200000
+</h4>,
+      ],
+      "className": "card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Luke Skywalker",
+        },
+        "ref": null,
+        "rendered": "Luke Skywalker",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Species: ",
+            "Human",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Species: ",
+          "Human",
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Homeworld: ",
+            "Tatooine",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Homeworld: ",
+          "Tatooine",
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "population: ",
+            "200000",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "population: ",
+          "200000",
+        ],
+        "type": "h4",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Luke Skywalker
+</h1>,
+          <h4>
+            Species: 
+            Human
+</h4>,
+          <h4>
+            Homeworld: 
+            Tatooine
+</h4>,
+          <h4>
+            population: 
+            200000
+</h4>,
+        ],
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Luke Skywalker",
+          },
+          "ref": null,
+          "rendered": "Luke Skywalker",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Species: ",
+              "Human",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Species: ",
+            "Human",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Homeworld: ",
+              "Tatooine",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Homeworld: ",
+            "Tatooine",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "population: ",
+              "200000",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "population: ",
+            "200000",
+          ],
+          "type": "h4",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
